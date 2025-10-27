@@ -1,9 +1,6 @@
-mkdir -p .github/workflows
-cat > .github/workflows/deploy.yml << 'EOF'
 name: Deploy Vite site to GitHub Pages
 on:
-  push:
-    branches: [ "main" ]
+  push: { branches: [ "main" ] }
   workflow_dispatch:
 
 permissions:
@@ -21,21 +18,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
-        with:
-          node-version: 18
-          cache: 'npm'
-      - name: Diagnostics
-        run: |
-          pwd
-          ls -la
-          node -v
-          npm -v
-          test -f package.json && echo "package.json present" || (echo "NO package.json"; exit 1)
-      - run: npm install
+        with: { node-version: 20 }
+      - run: npm ci
       - run: npm run build
       - uses: actions/upload-pages-artifact@v3
-        with:
-          path: dist
+        with: { path: dist }
   deploy:
     needs: build
     runs-on: ubuntu-latest
@@ -45,4 +32,3 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
-EOF
