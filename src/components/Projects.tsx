@@ -1,6 +1,9 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { ExternalLink, Github, ChevronLeft, ChevronRight, MoreHorizontal } from 'lucide-react';
 import { projects } from '../data/portfolio-data';
+
+// Helper: treat missing or "WIP" URLs as work-in-progress
+const isWip = (url?: string) => !url || url === 'WIP';
 
 const Projects = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -11,7 +14,8 @@ const Projects = () => {
     {
       id: 'more',
       title: 'And More...',
-      description: 'Check out my GitHub profile to see more of my projects and contributions to open source.',
+      description:
+        'Check out my GitHub profile to see more of my projects and contributions to open source.',
       technologies: [],
       isMoreCard: true,
     },
@@ -33,14 +37,6 @@ const Projects = () => {
   const goToPage = (pageIndex: number) => {
     setCurrentIndex(pageIndex * itemsPerPage);
   };
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      nextSlide();
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, [currentIndex]);
 
   const visibleItems = allItems.slice(currentIndex, currentIndex + itemsPerPage);
 
@@ -73,7 +69,7 @@ const Projects = () => {
                           {item.description}
                         </p>
                         <a
-                          href="https://github.com/yourusername"
+                          href="https://github.com/vvvvvvvvvivvi"
                           target="_blank"
                           rel="noopener noreferrer"
                           className="inline-flex items-center gap-2 px-6 py-3 bg-white text-slate-900 rounded-lg hover:bg-slate-100 transition-colors"
@@ -116,7 +112,7 @@ const Projects = () => {
                       </div>
 
                       <div className="flex gap-4">
-                        {project.liveUrl && (
+                        {!isWip(project.liveUrl) ? (
                           <a
                             href={project.liveUrl}
                             target="_blank"
@@ -126,8 +122,18 @@ const Projects = () => {
                             <ExternalLink size={18} />
                             <span className="text-sm">Live Demo</span>
                           </a>
+                        ) : (
+                          <span
+                            className="flex items-center gap-2 text-slate-400/70 bg-slate-100 border border-slate-200 rounded px-2 py-1 cursor-not-allowed"
+                            aria-disabled="true"
+                            title="Work in progress"
+                          >
+                            <ExternalLink size={18} />
+                            <span className="text-sm">Live Demo (WIP)</span>
+                          </span>
                         )}
-                        {project.githubUrl && (
+
+                        {project.githubUrl ? (
                           <a
                             href={project.githubUrl}
                             target="_blank"
@@ -137,6 +143,15 @@ const Projects = () => {
                             <Github size={18} />
                             <span className="text-sm">Code</span>
                           </a>
+                        ) : (
+                          <span
+                            className="flex items-center gap-2 text-slate-400/70 bg-slate-100 border border-slate-200 rounded px-2 py-1 cursor-not-allowed"
+                            aria-disabled="true"
+                            title="Work in progress"
+                          >
+                            <Github size={18} />
+                            <span className="text-sm">Code (WIP)</span>
+                          </span>
                         )}
                       </div>
                     </div>
@@ -145,6 +160,7 @@ const Projects = () => {
               })}
             </div>
 
+            {/* Navigation buttons (desktop) */}
             <button
               onClick={prevSlide}
               className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white rounded-full p-2 shadow-lg hover:bg-slate-50 transition-colors hidden lg:block"
@@ -162,6 +178,7 @@ const Projects = () => {
             </button>
           </div>
 
+          {/* Page indicators */}
           <div className="flex justify-center gap-2 mt-8">
             {Array.from({ length: totalPages }).map((_, index) => (
               <button
@@ -177,6 +194,7 @@ const Projects = () => {
             ))}
           </div>
 
+          {/* Mobile nav buttons */}
           <div className="flex justify-center gap-4 mt-8 lg:hidden">
             <button
               onClick={prevSlide}
