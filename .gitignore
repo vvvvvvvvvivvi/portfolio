@@ -21,3 +21,10 @@ dist-ssr
 *.sln
 *.sw?
 .env
+
+cat > .gitignore << 'EOF'
+node_modules
+dist
+.env
+.DS_Store
+EOF

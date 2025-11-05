@@ -83,6 +83,14 @@ export interface Project {
     },
     {
       id: '2',
+      title: 'Toxic Masculinity Discourse Analysis',
+      description: 'This is a Nature Language Processing project conducted on Python (PyTorch). I contributed to fine-tuning models using PyTorch + Hugging Face, and developed a Python NLP pipeline using BERT for natural language inference and sentiment analysis on 500k Reddit posts (2017–2024).',
+      technologies: ['Python', 'scikit-learn', 'PyTorch', 'seaborn', 'Excel', 'Hugging Face'],
+      //liveUrl: 'https://drive.google.com/file/d/1lXSLfH3yQbE_jeT1jxh4OIOCPr61D9iz/view?usp=sharing',
+      //githubUrl: 'https://github.com/vvvvvvvvvivvi/tiktokvirality',
+    },    
+    {
+      id: '2',
       title: 'Modelling pop music success in the TikTok era',
       description: 'This project investigates how short-form video virality reshapes the music industry. Using machine learning models trained on audio features, playlist placements, and TikTok metrics, it compares pre- and post-TikTok timeframes to quantify which factors most strongly predict Billboard chart success. The analysis highlights the growing dominance of social media virality over traditional curation in driving modern pop popularity.',
       technologies: ['Python', 'scikit-learn', 'matplotlib', 'seaborn', 'Excel', 'Kaggle'],
@@ -94,7 +102,7 @@ export interface Project {
       title: 'Lucky Star Jar',
       description: 'Lucky Star Jar is an interactive web app that gamifies affection through digital “lucky stars.” Each star contains a hidden compliment that can be drawn, shaken, or unlocked over time. The project blends playful design with dynamic front-end interactions, allowing users to “collect” compliments in a ComplimentDex and view their progress. The app was originally created as a personal birthday gift, for a special recipient whose love language is words of affirmation.',
       technologies: ['React', 'Tailwind CSS', 'Three.js', 'Javascript', ],
-      liveUrl: 'https://example.com',
+      //liveUrl: 'https://example.com',
       githubUrl: 'https://github.com/vvvvvvvvvivvi/lucky-star-jar',
     },
     {
@@ -102,7 +110,7 @@ export interface Project {
         title: 'Recipee',
         description: 'Recibee is a start-up idea. It is a web app/ IOS app that personalises cooking through intelligent recipe recommendations. Users log their available ingredients and kitchen tools, and the app suggests recipes or ingredient substitutions powered by an LLM processor and external recipe APIs. It dynamically adjusts portions, proposes replacements for missing ingredients, and learns user preferences over time.',
         technologies: ['React', 'Tailwind CSS', 'Node.js', 'PostgreSQL', 'Drizzle ORM', 'OpenAI API', 'pnpm'],
-        liveUrl: 'https://example.com',
+        //liveUrl: 'https://example.com',
         githubUrl: 'https://github.com/vvvvvvvvvivvi/recibeeSandbox',
       },
   ];
@@ -125,7 +133,7 @@ export interface Project {
       venue: 'Coming soon...',
       year: '2026',
       description: 'Coming soon...',
-      url: 'https://doi.org/your-second-publication-link',
+      //url: 'https://doi.org/your-second-publication-link',
       type: 'Journal',
     },
   ];
