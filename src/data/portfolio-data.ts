@@ -90,7 +90,7 @@ export interface Project {
       //githubUrl: 'https://github.com/vvvvvvvvvivvi/tiktokvirality',
     },    
     {
-      id: '2',
+      id: '3',
       title: 'Modelling pop music success in the TikTok era',
       description: 'This project investigates how short-form video virality reshapes the music industry. Using machine learning models trained on audio features, playlist placements, and TikTok metrics, it compares pre- and post-TikTok timeframes to quantify which factors most strongly predict Billboard chart success. The analysis highlights the growing dominance of social media virality over traditional curation in driving modern pop popularity.',
       technologies: ['Python', 'scikit-learn', 'matplotlib', 'seaborn', 'Excel', 'Kaggle'],
@@ -98,7 +98,7 @@ export interface Project {
       githubUrl: 'https://github.com/vvvvvvvvvivvi/tiktokvirality',
     },
     {
-      id: '3',
+      id: '4',
       title: 'Lucky Star Jar',
       description: 'Lucky Star Jar is an interactive web app that gamifies affection through digital “lucky stars.” Each star contains a hidden compliment that can be drawn, shaken, or unlocked over time. The project blends playful design with dynamic front-end interactions, allowing users to “collect” compliments in a ComplimentDex and view their progress. The app was originally created as a personal birthday gift, for a special recipient whose love language is words of affirmation.',
       technologies: ['React', 'Tailwind CSS', 'Three.js', 'Javascript', ],
@@ -106,7 +106,7 @@ export interface Project {
       githubUrl: 'https://github.com/vvvvvvvvvivvi/lucky-star-jar',
     },
     {
-        id: '4',
+        id: '5',
         title: 'Recipee',
         description: 'Recibee is a start-up idea. It is a web app/ IOS app that personalises cooking through intelligent recipe recommendations. Users log their available ingredients and kitchen tools, and the app suggests recipes or ingredient substitutions powered by an LLM processor and external recipe APIs. It dynamically adjusts portions, proposes replacements for missing ingredients, and learns user preferences over time.',
         technologies: ['React', 'Tailwind CSS', 'Node.js', 'PostgreSQL', 'Drizzle ORM', 'OpenAI API', 'pnpm'],
@@ -129,13 +129,13 @@ export interface Project {
     {
       id: '2',
       title: 'Coming soon...',
-      authors: ['YVivian Lee', 'Justin van Dijk'],
+      authors: ['Vivian Lee', 'Justin van Dijk'],
       venue: 'Coming soon...',
       year: '2026',
       description: 'Coming soon...',
       //url: 'https://doi.org/your-second-publication-link',
       type: 'Journal',
-    },
+    }
   ];
   
   export const experiences: Experience[] = [

@@ -9,7 +9,7 @@ const Skills = () => {
     Other: Sparkles,
   };
 
-  const categories = ['Frontend', 'Backend', 'Tools', 'Other'] as const;
+  const categories = ['Frontend', 'Backend', 'Data', 'GIS'] as const;
 
   return (
     <section id="skills" className="py-20 bg-slate-50">
