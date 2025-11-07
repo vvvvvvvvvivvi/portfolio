@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Twitter } from 'lucide-react';
+import { Github, Linkedin, Youtube } from 'lucide-react';
 import { personalInfo } from '../data/portfolio-data';
 
 const Hero = () => {
@@ -57,18 +57,12 @@ const Hero = () => {
               <Linkedin size={24} />
             </a>
             <a
-              href={personalInfo.twitter}
+              href={personalInfo.youtube}
               target="_blank"
               rel="noopener noreferrer"
               className="text-slate-600 hover:text-slate-900 transition-colors"
             >
-              <Twitter size={24} />
-            </a>
-            <a
-              href={`mailto:${personalInfo.email}`}
-              className="text-slate-600 hover:text-slate-900 transition-colors"
-            >
-              <Mail size={24} />
+              <Youtube size={24} />
             </a>
           </div>
         </div>

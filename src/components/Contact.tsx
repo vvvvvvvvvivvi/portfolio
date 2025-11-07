@@ -38,14 +38,6 @@ const Contact = () => {
             >
               <Linkedin size={24} />
             </a>
-            <a
-              href={personalInfo.twitter}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-3 bg-slate-100 text-slate-900 rounded-full hover:bg-slate-200 transition-colors"
-            >
-              <Twitter size={24} />
-            </a>
           </div>
         </div>
       </div>

@@ -102,8 +102,8 @@ export interface Project {
       title: 'Lucky Star Jar',
       description: 'Lucky Star Jar is an interactive web app that gamifies affection through digital “lucky stars.” Each star contains a hidden compliment that can be drawn, shaken, or unlocked over time. The project blends playful design with dynamic front-end interactions, allowing users to “collect” compliments in a ComplimentDex and view their progress. The app was originally created as a personal birthday gift, for a special recipient whose love language is words of affirmation.',
       technologies: ['React', 'Tailwind CSS', 'Three.js', 'Javascript', ],
-      //liveUrl: 'https://example.com',
-      githubUrl: 'https://github.com/vvvvvvvvvivvi/lucky-star-jar',
+      liveUrl: 'https://vvvvvvvvvivvi.github.io/star-jar/',
+      githubUrl: 'https://github.com/vvvvvvvvvivvi/star-jar',
     },
     {
         id: '5',

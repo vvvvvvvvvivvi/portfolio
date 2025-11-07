@@ -1,13 +1,14 @@
-import { Code2, Database, Wrench, Sparkles } from 'lucide-react';
+import { Monitor, Server, BarChart3, Map } from 'lucide-react';
 import { skills } from '../data/portfolio-data';
 
 const Skills = () => {
-  const categoryIcons = {
-    Frontend: Code2,
-    Backend: Database,
-    Tools: Wrench,
-    Other: Sparkles,
+    const categoryIcons = {
+    Frontend: Monitor,
+    Backend: Server,
+    Data: BarChart3,
+    GIS: Map,
   };
+
 
   const categories = ['Frontend', 'Backend', 'Data', 'GIS'] as const;
 

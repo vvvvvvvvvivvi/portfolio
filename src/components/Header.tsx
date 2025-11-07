@@ -44,7 +44,7 @@ const Header = () => {
             onClick={(e) => scrollToSection(e, '#hero')}
             className="text-xl font-bold text-slate-900"
           >
-            Vivian Lee
+            My World
           </a>
 
           <nav className="hidden md:flex items-center gap-8">
