@@ -32,7 +32,13 @@ export interface Project {
     category: 'Frontend' | 'Backend' | 'Data' | 'GIS';
   }
   
-  export const personalInfo = {
+  export const currently = [
+  { icon: '🔭', label: 'Building', value: 'No Pain No Game' },
+  { icon: '📍', label: 'Based in', value: 'London' },
+  { icon: '🌱', label: 'Learning', value: 'Three.js + shaders' },
+];
+
+export const personalInfo = {
     name: 'Vivian Lee',
     title: 'Fullstack Data Analyst',
     tagline: '',

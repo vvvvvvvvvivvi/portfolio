@@ -1,6 +1,6 @@
 import { Github, Linkedin, Youtube } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
-import { personalInfo } from '../data/portfolio-data';
+import { personalInfo, currently } from '../data/portfolio-data';
 
 const IDENTITIES = [
   'fullstack data analyst',
@@ -10,11 +10,6 @@ const IDENTITIES = [
   'gis researcher',
 ];
 
-const CURRENTLY = [
-  { icon: '🔭', label: 'Building', value: 'Lucky Star Jar v2' },
-  { icon: '📍', label: 'Based in', value: 'London' },
-  { icon: '🌱', label: 'Learning', value: 'Three.js + shaders' },
-];
 
 const Hero = () => {
   const [displayText, setDisplayText] = useState('');
@@ -68,7 +63,7 @@ const Hero = () => {
 
           {/* Currently block */}
           <div className="flex flex-wrap justify-center gap-2 md:gap-3 mb-12">
-            {CURRENTLY.map(({ icon, label, value }) => (
+            {currently.map(({ icon, label, value }) => (
               <div
                 key={label}
                 className="flex items-center gap-2 px-4 py-2 bg-white border border-slate-200 rounded-full text-sm text-slate-700 shadow-sm hover:shadow-md hover:border-slate-300 transition-all"
