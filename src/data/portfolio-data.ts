@@ -107,11 +107,19 @@ export interface Project {
     },
     {
         id: '5',
-        title: 'Recipee',
+        title: 'Recibee',
         description: 'Recibee is a start-up idea. It is a web app/ IOS app that personalises cooking through intelligent recipe recommendations. Users log their available ingredients and kitchen tools, and the app suggests recipes or ingredient substitutions powered by an LLM processor and external recipe APIs. It dynamically adjusts portions, proposes replacements for missing ingredients, and learns user preferences over time.',
         technologies: ['React', 'Tailwind CSS', 'Node.js', 'PostgreSQL', 'Drizzle ORM', 'OpenAI API', 'pnpm'],
         //liveUrl: 'https://example.com',
         githubUrl: 'https://github.com/vvvvvvvvvivvi/recibeeSandbox',
+      },
+      {
+        id: '6',
+        title: 'Chore-to-Mate',
+        description: "A play on the Japanese word 'ちょっと待って' (chotto matte — wait a minute) and the very British 'mate'. Working as a software developer, I got hooked on how DevOps tooling makes task ownership and accountability almost frictionless — tickets, assignments, clear status. Then I'd come home to a flat where dishes were piling up and neither I nor my flatmate (both deeply conflict avoidant) would say anything. Chore-to-Mate brings that same accountability structure to shared living: a household task manager that assigns, tracks, and rotates chores between flatmates, with an LLM on hand to suggest fair splits and nudge whoever's been 'meaning to' clean the bathroom all week.",
+        technologies: ['React', 'Tailwind CSS', 'Node.js', 'PostgreSQL', 'Drizzle ORM', 'Gemini API', 'Claude'],
+        liveUrl: 'https://chore-to-mate.vercel.app/',
+        githubUrl: 'https://github.com/vvvvvvvvvivvi/chore-to-mate',
       },
   ];
   
@@ -128,12 +136,12 @@ export interface Project {
     },
     {
       id: '2',
-      title: 'Coming soon...',
+      title: 'Connecting or dividing London? Evaluating the impact of the Elizabeth Line on job accessibility and spatial equity',
       authors: ['Vivian Lee', 'Justin van Dijk'],
-      venue: 'Coming soon...',
+      venue: 'Case Studies on Transport Policy',
       year: '2026',
-      description: 'Coming soon...',
-      //url: 'https://doi.org/your-second-publication-link',
+      description: 'An extended study of the Elizabeth Line\'s effect on job accessibility across London. While overall accessibility improves, the benefits are spatially uneven — outer London boroughs experience travel time reductions of over 40% to key employment hubs, yet persistent disparities along socioeconomic lines raise questions about who the infrastructure truly serves.',
+      url: 'https://doi.org/10.1016/j.cstp.2026.101768',
       type: 'Journal',
     }
   ];
