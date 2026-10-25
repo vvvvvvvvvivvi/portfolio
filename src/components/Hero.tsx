@@ -1,133 +1,27 @@
-import { Github, Linkedin, Youtube } from 'lucide-react';
-import React, { useEffect, useState } from 'react';
-import { personalInfo, currently } from '../data/portfolio-data';
-
-const IDENTITIES = [
-  'fullstack data analyst',
-  'map nerd',
-  'over-engineer by choice',
-  'data witch',
-  'gis researcher',
-];
-
-
+import { useState } from 'react';
+// [id, x, label, labelY]
+const eliz: [string, number, string, number][] = [['gateway',100,'Gateway',140],['nds',230,'National Data Store',72],['recibee',360,'Recibee',140],['npng',490,'No Pain No Game',72],['tracker',620,'Data Tracker',140],['crm',750,'180DC CRM',72]];
+const jub: [number, string, number][] = [[170,'Lucky Star Jar',197],[440,'Get home safe',265],[710,'Geospatial toolbox',197]];
+const stars = [['16','people interviewed for one dashboard, across eight teams.'],['4,700','reviews and posts read so I didn’t have to guess what annoys people.'],['30 → 3','minutes to produce a reporting figure, after automating it.'],['7% → 3%','hallucinations in my recipe app. Still not zero, and I say so.'],['40%+','faster travel to jobs for some outer London boroughs after the Elizabeth line.']];
 const Hero = () => {
-  const [displayText, setDisplayText] = useState('');
-  const [wordIndex, setWordIndex] = useState(0);
-  const [isDeleting, setIsDeleting] = useState(false);
-  const [isPaused, setIsPaused] = useState(false);
-
-  useEffect(() => {
-    const currentWord = IDENTITIES[wordIndex];
-
-    if (isPaused) {
-      const timeout = setTimeout(() => {
-        setIsPaused(false);
-        setIsDeleting(true);
-      }, 2000);
-      return () => clearTimeout(timeout);
-    }
-
-    const timeout = setTimeout(() => {
-      if (!isDeleting) {
-        const next = currentWord.slice(0, displayText.length + 1);
-        setDisplayText(next);
-        if (next === currentWord) setIsPaused(true);
-      } else {
-        const next = displayText.slice(0, -1);
-        setDisplayText(next);
-        if (next === '') {
-          setIsDeleting(false);
-          setWordIndex((i) => (i + 1) % IDENTITIES.length);
-        }
-      }
-    }, isDeleting ? 45 : 95);
-
-    return () => clearTimeout(timeout);
-  }, [displayText, isDeleting, wordIndex, isPaused]);
-
+  const [i, setI] = useState(-1);
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 to-slate-100">
-      <div className="container mx-auto px-6 py-20">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-slate-900 mb-6">
-            {personalInfo.name}
-          </h1>
-
-          <div className="min-h-[2.25rem] md:min-h-[2.75rem] flex items-center justify-center mb-8">
-            <p className="text-2xl md:text-3xl text-slate-600">
-              {displayText}
-              <span className="animate-pulse text-slate-400">|</span>
-            </p>
-          </div>
-
-          {/* Currently block */}
-          <div className="flex flex-wrap justify-center gap-2 md:gap-3 mb-12">
-            {currently.map(({ icon, label, value }) => (
-              <div
-                key={label}
-                className="flex items-center gap-2 px-4 py-2 bg-white border border-slate-200 rounded-full text-sm text-slate-700 shadow-sm hover:shadow-md hover:border-slate-300 transition-all"
-              >
-                <span role="img" aria-label={label}>{icon}</span>
-                <span className="text-slate-400">{label}</span>
-                <span className="font-medium text-slate-800">{value}</span>
-              </div>
-            ))}
-          </div>
-
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
-            <a
-              href="#projects"
-              onClick={(e) => {
-                e.preventDefault();
-                document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' });
-              }}
-              className="px-8 py-3 bg-slate-900 text-white rounded-lg hover:bg-slate-800 transition-colors"
-            >
-              View Projects
-            </a>
-            <a
-              href="#contact"
-              onClick={(e) => {
-                e.preventDefault();
-                document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' });
-              }}
-              className="px-8 py-3 bg-white text-slate-900 border-2 border-slate-900 rounded-lg hover:bg-slate-50 transition-colors"
-            >
-              Get in Touch
-            </a>
-          </div>
-
-          <div className="flex justify-center gap-6">
-            <a
-              href={personalInfo.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-slate-600 hover:text-slate-900 transition-colors"
-            >
-              <Github size={24} />
-            </a>
-            <a
-              href={personalInfo.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-slate-600 hover:text-slate-900 transition-colors"
-            >
-              <Linkedin size={24} />
-            </a>
-            <a
-              href={personalInfo.youtube}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-slate-600 hover:text-slate-900 transition-colors"
-            >
-              <Youtube size={24} />
-            </a>
-          </div>
-        </div>
+    <div className="wrap hero" id="top">
+      <h1>Why is this so annoying? I’ll find out and make sure it gets fixed.</h1>
+      <p className="lead">I’m Vivian, a graduate GIS analyst in London turning messy workflows into useful products through user research, honest trade-offs and hands-on building. I’m looking for Product Owner and Associate Product Manager roles.</p>
+      <div className="cta"><a className="btn fill" href="#work">Read the case studies</a><a className="btn" href="#contact">Say hello</a></div>
+      <div className="map">
+        <svg viewBox="0 0 880 330" role="img" aria-label="Two-line map: case studies on the Elizabeth line, side projects on the Jubilee line">
+          <text className="t" x="40" y="28">ELIZABETH LINE · CASE STUDIES</text><text className="t" x="40" y="318">JUBILEE LINE · SIDE PROJECTS</text>
+          <path d="M40 100H840" stroke="#6950a1" strokeWidth="14" strokeLinecap="round" /><path d="M40 225H840" stroke="#7f8c97" strokeWidth="14" strokeLinecap="round" />
+          {eliz.map(([id, x, l, y]) => <g key={id}><circle cx={x} cy="100" r="9" fill="#fff" stroke="#26233a" strokeWidth="4" /><a href={`#${id}`}><text x={x} y={y} textAnchor="middle">{l}</text></a></g>)}
+          {jub.map(([x, l, y]) => <g key={l}><circle cx={x} cy="225" r="9" fill="#fff" stroke="#26233a" strokeWidth="4" /><a href="#side"><text x={x} y={y} textAnchor="middle">{l}</text></a></g>)}
+        </svg>
+        <div className="star-box"><button className="btn fill" type="button" onClick={() => setI(i + 1)}>Draw a lucky star</button>
+          <div id="starOut" aria-live="polite">{i < 0 ? 'A nod to my Lucky Star Jar app: each star holds a real number from my work.' :
+            <span className="star" key={i} style={{ display: 'block' }}><b>★ {stars[i % stars.length][0]}</b>{stars[i % stars.length][1]}</span>}</div></div>
       </div>
-    </section>
+    </div>
   );
 };
-
 export default Hero;

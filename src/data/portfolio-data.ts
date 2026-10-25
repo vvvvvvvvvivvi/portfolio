@@ -39,16 +39,12 @@ export interface Project {
 ];
 
 export const personalInfo = {
-    name: 'Vivian Lee',
-    title: 'Fullstack Data Analyst',
-    tagline: '',
-    bio: 'I love solving problems by creating new ones for myself — the kind that involve spending six hours automating something just to save six seconds a day, because that’s fun <3 I’m hopelessly in love with GIScience, maps, and the art of over-engineering. In my spare time, I build apps and get far too excited about applied machine learning solutions.',
-    email: 'vivianlee2468@gmail.com',
-    github: 'https://github.com/vvvvvvvvvivvi',
-    linkedin: 'https://www.linkedin.com/in/vivian-lee-wk/',
-    youtube: 'https://www.youtube.com/@violetmyalias',
-  };
-  
+ name: 'Vivian Lee', title: 'Product thinking. Technical depth.',
+ tagline: 'I turn messy workflows into useful digital products — through user research, thoughtful trade-offs and hands-on delivery.',
+ bio: 'I like getting to the bottom of why something is frustrating, then building something that makes it easier. Sometimes that means writing Python; sometimes it means asking one more question before writing anything at all. At Jacobs, I combine geospatial development with practical product work: interviewing users, co-defining a backlog with a Product Owner, testing interfaces and checking what we deliver against requirements. Outside work, I build apps to explore everyday problems. I still get far too excited about maps and applied machine learning — but the question I keep coming back to is: does this actually help someone?',
+ email: 'vivianlee2468@gmail.com', github: 'https://github.com/vvvvvvvvvivvi',
+ linkedin: 'https://www.linkedin.com/in/vivian-lee-wk/', youtube: 'https://www.youtube.com/@violetmyalias',
+};
   export const skills: Skill[] = [
     // Frontend
     { name: 'JavaScript', category: 'Frontend' },
@@ -152,34 +148,15 @@ export const personalInfo = {
     }
   ];
   
-  export const experiences: Experience[] = [
-    {
-      id: '1',
-      title: 'Graduate GIS Analyst',
-      company: 'Company Name',
-      period: '2024 - Present',
-      description: 'Developed Python scripts and FME workbenches to automate geospatial analyses and figure production for diverse projects across UK&I.',
-    },
-    {
-      id: '2',
-      title: 'Full Stack Developer',
-      company: 'What if i',
-      period: '2025 - Present',
-      description: 'Built and maintained web applications using modern technologies, collaborated with cross-functional teams.',
-    },
-    {
-      id: '3',
-      title: 'Teaching Assistant',
-      company: 'UCL',
-      period: '2023 - 2025',
-      description: 'Employing proficiency in R and Python programming, provided teaching assistance to post-graduate digital skill classes.',
-    },
-  ];
-  
-  export const milestones = [
-    { label: 'Projects Completed', value: '5+' },
-    { label: 'Years Experience', value: '3+' },
-    { label: 'Industries Sampled', value: '9' },
-    { label: 'Publications', value: '2' },
-  ];
-  
+export const experiences: Experience[] = [
+ {id:'jacobs', title:'Graduate GIS Analyst',company:'Jacobs',period:'September 2025 – Present',description:'Developer and Agile/Scrum team member. Co-define the National Data Store backlog with the Product Owner, write user stories, help prioritise sprint scope and develop acceptance criteria. Conduct discovery and usability testing alongside geospatial application development and reusable automation.'},
+ {id:'180dc',title:'Consulting Executive',company:'180 Degrees Consulting UCL',period:'October 2023 – May 2025',description:'Led CRM and lead-generation automation delivery, connecting Typeform, Zapier and Google Sheets around the lead-to-conversion workflow. Personally awarded Best Consultant; the project received Best Deliverable following client feedback.'},
+ {id:'intern',title:'Geospatial & GIS Intern',company:'Jacobs',period:'July – August 2024',description:'Developed geospatial analysis and automation experience before returning to Jacobs as a graduate.'},
+ {id:'ucl',title:'Student IT Teaching Assistant',company:'UCL Information Services Division',period:'2023 – 2025',description:'Delivered interactive Python and R workshops for over 30 students per session, led small teaching-support teams and explained technical concepts to non-specialists.'},
+];
+export const milestones = [
+ {label:'Gateway stakeholders interviewed',value:'16'},
+ {label:'Teams represented in discovery',value:'8'},
+ {label:'Recibee usability participants',value:'15'},
+ {label:'Reporting time per figure',value:'30 → 3 min'},
+];

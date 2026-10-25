@@ -1,6 +1,7 @@
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
+import SideProjects from './components/SideProjects';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Publications from './components/Publications';
@@ -10,15 +11,18 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="min-h-screen bg-white">
+    <div>
       <Header />
       <Hero />
-      <About />
-      <Skills />
+      <main>
       <Projects />
-      <Publications /> 
+      <SideProjects />
       <Experience />
+      <Skills />
+      <About />
+      <Publications />
       <Contact />
+      </main>
       <Footer />
     </div>
   );
