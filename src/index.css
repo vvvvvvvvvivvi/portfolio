@@ -121,7 +121,7 @@ footer{border-top:6px solid var(--jub)}
 .ev b{font-family:'Hammersmith One',sans-serif;font-weight:400;font-size:18px;margin-right:8px}
 .ev .tag{font-size:12px;font-weight:600;color:var(--mute);border:1px solid var(--line);background:#fff;border-radius:999px;padding:1px 9px}
 .ev p{margin:6px 0 0;font-size:16px}.ev a{display:inline-block;margin-top:6px;font-weight:600;color:var(--lizzie)}
-.contact h2::after{margin-left:auto;margin-right:auto}.ask{font:400 clamp(22px,3.4vw,34px)/1.35 'Hammersmith One',sans-serif;margin:28px auto 0;max-width:20em}.ask a{text-decoration:underline;text-decoration-color:var(--lizzie);text-decoration-thickness:5px;text-underline-offset:7px}.ask a:hover{color:var(--lizzie)}
 @media(max-width:820px){.sk{grid-template-columns:1fr}.board{position:static}}
 .stop{--c:var(--lizzie)}.hero{scroll-margin-top:0}.edu{margin:28px 0 0;font-size:14px;color:var(--mute)}
 .contact h2{font-size:clamp(28px,4.2vw,42px);max-width:18em}.ask{font:400 19px/1.7 Figtree,system-ui,sans-serif;max-width:32em;margin:22px auto 0}.ask a{text-decoration-thickness:3px;text-underline-offset:4px;font-weight:600;overflow-wrap:normal}.pill{display:inline-flex;align-items:center;gap:8px;border:2px solid var(--lizzie);border-radius:999px;background:#fff;padding:3px 4px 3px 16px;margin-left:4px;vertical-align:middle;font-size:16px}.pill a{text-decoration:none}.pill a:hover{text-decoration:underline}.ask .pill .btn{margin:0;padding:3px 14px;font-size:13px}.social{font-size:15px;color:var(--mute);margin:20px 0 0}.social a{color:var(--ink)}footer a{display:block;margin-bottom:8px;font-weight:600;color:var(--lizzie)}
+#side .pubs{grid-template-columns:repeat(auto-fit,minmax(min(380px,100%),1fr))}

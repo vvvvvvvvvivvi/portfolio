@@ -1,7 +1,7 @@
 import { useState } from 'react';
 // [id, x, label, labelY]
 const eliz: [string, number, string, number][] = [['gateway',100,'Gateway',140],['nds',230,'National Data Store',72],['recibee',360,'Recibee',140],['npng',490,'No Pain No Game',72],['tracker',620,'Data Tracker',140],['crm',750,'180DC CRM',72]];
-const jub: [number, string, number][] = [[170,'Lucky Star Jar',197],[440,'Get home safe',265],[710,'Geospatial toolbox',197]];
+const jub: [number, string, number][] = [[130,'Lucky Star Jar',197],[350,'Get home safe',265],[570,'Geospatial toolbox',197],[790,'Leerics',265]];
 const stars = [['16','people interviewed for one dashboard, across eight teams.'],['4,700','reviews and posts read so I didn’t have to guess what annoys people.'],['30 → 3','minutes to produce a reporting figure, after automating it.'],['7% → 3%','hallucinations in my recipe app. Still not zero, and I say so.'],['40%+','faster travel to jobs for some outer London boroughs after the Elizabeth line.']];
 const Hero = () => {
   const [i, setI] = useState(-1);

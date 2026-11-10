@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#6950a1">
+<title>Page not found | Vivian Lee</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Ccircle cx=%2232%22 cy=%2232%22 r=%2223%22 fill=%22%23fff%22 stroke=%22%23dc241f%22 stroke-width=%2210%22/%3E%3Crect x=%222%22 y=%2224%22 width=%2260%22 height=%2216%22 rx=%223%22 fill=%22%23113b92%22/%3E%3Ctext x=%2232%22 y=%2236.6%22 text-anchor=%22middle%22 font-family=%22Arial,Helvetica,sans-serif%22 font-weight=%22700%22 font-size=%2213%22 fill=%22%23fff%22%3EVL%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Figtree:wght@400;600&display=swap">
+<style>
+:root{--ink:#26233a;--mute:#5c586e;--lizzie:#6950a1;--jub:#7f8c97;--wash:#f4f1fa;color-scheme:light}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;display:grid;place-items:center;padding:24px;background:#fff;color:var(--ink);font:400 18px/1.6 Figtree,system-ui,sans-serif;text-align:center}
+main{max-width:34rem}
+.code{font:400 clamp(72px,16vw,128px)/1 'Hammersmith One',Georgia,sans-serif;color:var(--lizzie)}
+h1{font:400 clamp(28px,5vw,40px)/1.15 'Hammersmith One',Georgia,sans-serif;margin:8px 0 12px}
+p{margin:0 0 28px;color:var(--mute)}
+.line{height:10px;border-radius:5px;background:var(--jub);position:relative;margin:28px auto;width:min(320px,80%)}
+.line::after{content:"";position:absolute;left:50%;top:50%;width:26px;height:26px;margin:-13px 0 0 -13px;border-radius:50%;background:#fff;border:5px solid var(--lizzie)}
+a.btn{display:inline-block;padding:12px 24px;border-radius:999px;background:var(--lizzie);color:#fff;font-weight:600;text-decoration:none}
+a.btn:hover{transform:translateY(-2px)}
+a.btn:focus-visible{outline:3px solid var(--lizzie);outline-offset:3px}
+</style>
+</head>
+<body>
+<main>
+<div class="code">404</div>
+<div class="line" aria-hidden="true"></div>
+<h1>Wrong platform.</h1>
+<p>That page doesn’t exist, or it has moved. The portfolio is where the line goes.</p>
+<a class="btn" id="home" href="/">Back to the portfolio</a>
+</main>
+<script>
+var HOME = '/portfolio/';
+document.getElementById('home').href = HOME;
+</script>
+</body>
+</html>
