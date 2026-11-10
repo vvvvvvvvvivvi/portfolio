@@ -71,7 +71,7 @@ details h4{margin:10px 0 2px;font-size:15px}details h4:first-child{margin-top:0}
 .pub .k{font-size:13px;font-weight:600;color:var(--dlr)}.pub h3{font-size:21px;margin:6px 0 8px}.pub p{font-size:15px;color:var(--mute);margin:0 0 14px}
 .pub a{font-weight:600;color:var(--lizzie)}
 .contact{text-align:center}.contact h2{margin:0 auto}.contact .intro{margin:16px auto 28px}
-.mail{font:800 clamp(22px,4.5vw,44px) 'Bricolage Grotesque';text-decoration:underline;text-decoration-color:var(--star);text-decoration-thickness:6px;text-underline-offset:6px;word-break:break-word}
+.ask a{overflow-wrap:anywhere}.ask .btn{font:600 14px Figtree,sans-serif;padding:4px 14px;margin-left:12px;vertical-align:middle}.social{margin:24px 0 0}.social a{font-weight:600;text-decoration-color:var(--lizzie);text-decoration-thickness:3px;text-underline-offset:4px}
 footer{padding:28px 0 36px;text-align:center;color:var(--mute);font-size:14px}
 @media(max-width:720px){.stop .grid,.exp li,.about{grid-template-columns:1fr}.rail{padding-left:26px}.stop::before{left:-41px}.bay{padding:32px 22px}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
