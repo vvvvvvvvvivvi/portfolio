@@ -15,8 +15,10 @@ const Contact = () => {
       <h2>I would love to build a solution that you will use.</h2>
       <p className="ask">
         Reach out to me on <a href={personalInfo.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>, or email me at{' '}
-        <a href={`mailto:${personalInfo.email}`}>{personalInfo.email}</a>
-        <button className="btn" type="button" onClick={copy}>{label}</button>
+        <span className="pill">
+          <a href={`mailto:${personalInfo.email}`}>{personalInfo.email}</a>
+          <button className="btn" type="button" onClick={copy}>{label}</button>
+        </span>
       </p>
       <p className="social">
         Visit my <a href={personalInfo.github} target="_blank" rel="noopener noreferrer">GitHub</a> or <a href={THREADS} target="_blank" rel="noopener noreferrer">Threads</a>
